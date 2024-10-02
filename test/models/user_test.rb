@@ -2,10 +2,10 @@ require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
   test "requires a name" do
-    @user =  User.new(name: "", email: "johndoe@example.com", password: "password")
+    @user = User.new(name: "", email: "johndoe@example.com", password: "password")
     assert_not @user.valid?
 
-    @user.name = 'Jhon'
+    @user.name = "Jhon"
     assert @user.valid?
   end
 
@@ -31,7 +31,7 @@ class UserTest < ActiveSupport::TestCase
   test "name and email are stripped from spaces before saving" do
     @user = User.create(
       name: " John ",
-      email: " johndoe@example.com ",
+      email: " johndoe@example.com "
     )
 
     assert_equal "John", @user.name
