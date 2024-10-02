@@ -1,26 +1,26 @@
 include:
-  - '**/*.rb'
-  - '**/*.gemfile'
-  - '**/*.gemspec'
-  - '**/*.rake'
-  - '**/*.ru'
-  - '**/Gemfile'
-  - '**/Rakefile'
+  - "app/**/*.rb"
+  - "config/**/*.rb"
 exclude:
-  - 'db/**/*'
-  - 'config/**/*'
-  - 'script/**/*'
-  - 'bin/{rails,rake}'
-  - spec/**/*
-  - test/**/*
-  - vendor/**/*
+  - "spec/**/*"
+  - "test/**/*"
+  - "vendor/**/*"
   - ".bundle/**/*"
-require: []
+require:
+  - actioncable
+  - actionmailer
+  - actionpack
+  - actionview
+  - activejob
+  - activemodel
+  - activerecord
+  - activestorage
+  - activesupport
 domains: []
 reporters:
   - rubocop
   - reek
-  - require_not_found
+  # - require_not_found
 formatter:
   rubocop:
     cops: safe
@@ -31,4 +31,5 @@ require_paths: []
 plugins:
   - solargraph-rails
   - solargraph-reek
+  - solargraph-rspec
 max_files: 5000
