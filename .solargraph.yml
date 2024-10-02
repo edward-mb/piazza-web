@@ -1,0 +1,34 @@
+include:
+  - '**/*.rb'
+  - '**/*.gemfile'
+  - '**/*.gemspec'
+  - '**/*.rake'
+  - '**/*.ru'
+  - '**/Gemfile'
+  - '**/Rakefile'
+exclude:
+  - 'db/**/*'
+  - 'config/**/*'
+  - 'script/**/*'
+  - 'bin/{rails,rake}'
+  - spec/**/*
+  - test/**/*
+  - vendor/**/*
+  - ".bundle/**/*"
+require: []
+domains: []
+reporters:
+  - rubocop
+  - reek
+  - require_not_found
+formatter:
+  rubocop:
+    cops: safe
+    except: []
+    only: []
+    extra_args: []
+require_paths: []
+plugins:
+  - solargraph-rails
+  - solargraph-reek
+max_files: 5000
