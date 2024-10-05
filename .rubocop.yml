@@ -20,8 +20,8 @@ inherit_gem:
   standard-performance: config/base.yml
   standard-custom: config/base.yml
   standard-rails: config/base.yml
-  rubocop-rails-omakase: rubocop.yml
+#   rubocop-rails-omakase: rubocop.yml
 
-AllCops:
-  SuggestExtensions: false
+# AllCops:
+#   SuggestExtensions: false
 
